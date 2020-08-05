@@ -1,3 +1,4 @@
+import 'controller/states_controller.dart';
 import 'states.dart';
 
 /// This type initializes an application.
@@ -29,7 +30,8 @@ class StatesChannel extends ApplicationChannel {
     // Prefer to use `link` instead of `linkFunction`.
     // See: https://aqueduct.io/docs/http/request_controller/
     router
-      .route("/state/[:uf]")
+      //.route("/state/[:uf]")
+      .route("/state")
       .link(() => StatesController());
 
     return router;
